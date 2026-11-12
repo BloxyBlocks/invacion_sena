@@ -24,8 +24,8 @@ Los **Sprints I1, I2 e I3** están implementados y verificados, pendientes de ap
 - Salto temporal con destello y rótulo «2 HORAS DESPUÉS...» para representar el break.
 - Los compañeros y el instructor salen del ambiente y cierran la puerta; se escucha un grito y el personaje exclama «¡¿Qué fue esoo?!».
 - Cinemática breve de irrupción: la puerta se rompe y entra el Zombi Aprendiz.
-- Ataque contextual con teclado (`E` / `Espacio`): proyectil con trayectoria, impacto y *knockout* del zombi.
-- Salida al pasillo habilitada tras el *knockout*; al cruzar la zona verde comienza la Escena 2.
+- Ataque contextual con teclado (`E` / `Espacio`): proyectil con trayectoria, impacto y _knockout_ del zombi.
+- Salida al pasillo habilitada tras el _knockout_; al cruzar la zona verde comienza la Escena 2.
 
 **I3 — Escena 2: Pasillos, Gabinete y Hacha (completado):**
 
@@ -47,7 +47,7 @@ Los **Sprints I1, I2 e I3** están implementados y verificados, pendientes de ap
 
 **Integración visual (completado):**
 
-- Fondo del menú `assets/img/fondos/fondo_menu.png` en modo *cover*, con velo oscuro, viñeta, brasas y paleta carmesí; en pantallas anchas el contenido se desplaza a la derecha para dejar visible al personaje acurrucado.
+- Fondo del menú `assets/img/fondos/fondo_menu.png` en modo _cover_, con velo oscuro, viñeta, brasas y paleta carmesí; en pantallas anchas el contenido se desplaza a la derecha para dejar visible al personaje acurrucado.
 - Texturas `assets/img/texturas/textura_pared.png` y `baldosa_color_crema.png` repetidas con `CanvasPattern` y teñidas para conservar la atmósfera de terror en la Escena 1 y en la escena de prueba.
 - Capas offscreen pre-renderizadas para fondo, suelo, mobiliario y suciedad/sangre; solo la luz parpadeante y las entidades se dibujan por fotograma.
 - Corrección del `InputManager`: las pulsaciones de teclado y ratón se conservan hasta que un fotograma ejecuta al menos una actualización fija.
@@ -64,27 +64,27 @@ Los **assets definitivos son manuales**. La integración actual cubre el logo, e
 
 ## Assets gráficos
 
-| Asset | Ruta | Uso |
-|---|---|---|
-| Logo principal | `assets/img/icons/icon.png` | `BootScene`, `MenuScene` y favicon |
-| Fondo del menú | `assets/img/fondos/fondo_menu.png` | Fondo terrorífico del menú principal |
-| Textura de pared | `assets/img/texturas/textura_pared.png` | Paredes de la Escena 1 y de la escena de prueba |
-| Baldosa crema | `assets/img/texturas/baldosa_color_crema.png` | Suelo del salón y arena de prueba |
-| Zamora (4 vistas) | `assets/img/players/zamora/vista_*.png` | Jugador quieto/apuntando en 4 direcciones; retratos |
-| Chantre (4 vistas) | `assets/img/players/chantre/vista_*.png` | Jugador quieto/apuntando en 4 direcciones; retratos |
-| Juan (4 vistas) | `assets/img/players/juan/vista_*.png` | Jugador quieto/apuntando en 4 direcciones; retratos |
-| Daiver (4 vistas) | `assets/img/players/daiver/vista_*.png` | Jugador quieto/apuntando en 4 direcciones; retratos |
+| Asset              | Ruta                                          | Uso                                                 |
+| ------------------ | --------------------------------------------- | --------------------------------------------------- |
+| Logo principal     | `assets/img/icons/icon.png`                   | `BootScene`, `MenuScene` y favicon                  |
+| Fondo del menú     | `assets/img/fondos/fondo_menu.png`            | Fondo terrorífico del menú principal                |
+| Textura de pared   | `assets/img/texturas/textura_pared.png`       | Paredes de la Escena 1 y de la escena de prueba     |
+| Baldosa crema      | `assets/img/texturas/baldosa_color_crema.png` | Suelo del salón y arena de prueba                   |
+| Zamora (4 vistas)  | `assets/img/players/zamora/vista_*.png`       | Jugador quieto/apuntando en 4 direcciones; retratos |
+| Chantre (4 vistas) | `assets/img/players/chantre/vista_*.png`      | Jugador quieto/apuntando en 4 direcciones; retratos |
+| Juan (4 vistas)    | `assets/img/players/juan/vista_*.png`         | Jugador quieto/apuntando en 4 direcciones; retratos |
+| Daiver (4 vistas)  | `assets/img/players/daiver/vista_*.png`       | Jugador quieto/apuntando en 4 direcciones; retratos |
 
 Los assets se importan desde `src/core/AssetManifest.js`; Vite los emite con hash en `dist/assets/` durante la compilación. Cada vista declara un recorte (`crop`) medido sobre el canal alfa para que el personaje mantenga escala y anclaje al girar. Solo existen sprites de **estado quieto**; caminar, correr y golpear se integrarán cuando se entreguen sus animaciones.
 
 ## Audio
 
-| Archivo | Duración | Uso |
-|---|---|---|
-| `assets/sound/music/menu/fondo_menu.mp3` | 148.04 s | Música del menú principal |
-| `assets/sound/music/ambiental/ambiente_tranquilo.mp3` | 181.99 s | Escena 1 durante el diálogo de introducción |
-| `assets/sound/music/ambiental/ambiente_horror.mp3` | 122.04 s | Escena 1 desde la irrupción del zombi y Escena 2 |
-| `assets/sound/effects/caminar.mp3` | 5.92 s | Pasos en bucle al desplazarse |
+| Archivo                                               | Duración | Uso                                              |
+| ----------------------------------------------------- | -------- | ------------------------------------------------ |
+| `assets/sound/music/menu/fondo_menu.mp3`              | 148.04 s | Música del menú principal                        |
+| `assets/sound/music/ambiental/ambiente_tranquilo.mp3` | 181.99 s | Escena 1 durante el diálogo de introducción      |
+| `assets/sound/music/ambiental/ambiente_horror.mp3`    | 122.04 s | Escena 1 desde la irrupción del zombi y Escena 2 |
+| `assets/sound/effects/caminar.mp3`                    | 5.92 s   | Pasos en bucle al desplazarse                    |
 
 `AudioManager` conecta cada pista al grafo Web Audio con un `GainNode` propio para hacer fundidos cruzados y usa un `masterGain` común para el mute. La pista solicitada se guarda como pendiente hasta que el primer gesto del usuario desbloquea el contexto de audio.
 
@@ -96,13 +96,13 @@ El efecto de pasos se activa en `Player.update()` solo cuando el desplazamiento 
 
 ### 1. Requisitos
 
-| Elemento | Versión / condición |
-|---|---|
-| Node.js | 20 o superior; verificado con 24.21.0 |
-| npm | 10 o superior; verificado con 11.19.0 |
-| Navegador | Moderno, con Canvas 2D y Web Audio API; verificado en Chrome 156 y Chrome headless 157 |
-| Assets | Incluidos en `assets/img/` y `assets/sound/`; no se requiere descarga adicional |
-| Sistema operativo | Windows, macOS o Linux con Node.js instalado |
+| Elemento          | Versión / condición                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| Node.js           | 20 o superior; verificado con 24.21.0                                                  |
+| npm               | 10 o superior; verificado con 11.19.0                                                  |
+| Navegador         | Moderno, con Canvas 2D y Web Audio API; verificado en Chrome 156 y Chrome headless 157 |
+| Assets            | Incluidos en `assets/img/` y `assets/sound/`; no se requiere descarga adicional        |
+| Sistema operativo | Windows, macOS o Linux con Node.js instalado                                           |
 
 ### 2. Instalación
 
@@ -113,6 +113,16 @@ npm install
 ```
 
 Esto instala Vite como dependencia de desarrollo. El validador documental no tiene dependencias externas.
+
+## JUGAR YA CON PYTHON
+
+Solo necesita un servidor estático sencillo, no Node ni npm:
+
+# Si tiene Python:
+
+python -m http.server 8080 -d dist
+
+# Abrir http://localhost:8080
 
 ### 3. Modo desarrollo
 
@@ -176,7 +186,7 @@ Comprobación manual mínima de I1 + I2 + I3 + audio + integración visual:
 5. Confirmar que los compañeros salen, la puerta se cierra, suena el grito y aparece la línea «¡¿Qué fue esoo?!».
 6. Verificar que la puerta se rompe, que entra el Zombi Aprendiz y que la música cambia a `ambiente_horror`.
 7. Mover a cada personaje en las cuatro direcciones y comprobar que los pasos suenan solo mientras se desplaza y que el sprite cambia entre `vista_abajo`, `vista_arriba`, `vista_derecha` y `vista_izquierda`.
-8. Lanzar el teclado con `E` o `Espacio` y comprobar el *knockout*.
+8. Lanzar el teclado con `E` o `Espacio` y comprobar el _knockout_.
 9. Caminar hasta la zona verde de salida y confirmar que la música se detiene y comienza la Escena 2 con su cinemática.
 10. En la Escena 2, pulsar `E` sin mantener frente al gabinete y comprobar que **no** se rompe; después mantener `E` hasta completar los 3 golpes.
 11. Pulsar `E` de nuevo para tomar el Hacha de Incendios y dejar que la cinemática inicie la oleada de 6 zombis.
@@ -192,25 +202,25 @@ La evidencia reproducible de cada sprint está en `docs/evidence/i1/`, `docs/evi
 
 ### 7. Scripts disponibles
 
-| Script | Qué hace |
-|---|---|
-| `npm run dev` | Inicia el servidor de desarrollo de Vite |
-| `npm run build` | Compila la versión de producción en `dist/` |
-| `npm run preview` | Sirve la compilación de producción |
-| `npm run docs:check` | Valida la consistencia de la documentación |
-| `npm run docs:check:strict` | Valida y falla ante errores o advertencias |
+| Script                      | Qué hace                                    |
+| --------------------------- | ------------------------------------------- |
+| `npm run dev`               | Inicia el servidor de desarrollo de Vite    |
+| `npm run build`             | Compila la versión de producción en `dist/` |
+| `npm run preview`           | Sirve la compilación de producción          |
+| `npm run docs:check`        | Valida la consistencia de la documentación  |
+| `npm run docs:check:strict` | Valida y falla ante errores o advertencias  |
 
 ### 8. Problemas comunes
 
-| Síntoma | Causa probable | Solución |
-|---|---|---|
-| `npm` no se reconoce | Node.js no está instalado o no está en `PATH` | Instalar Node.js 20+ y abrir una terminal nueva |
-| El puerto 5173 está ocupado | Otro proceso o servidor Vite activo | Usar `npm run dev -- --port 5174` o detener el proceso anterior |
-| Pantalla en negro | Error de JavaScript o assets | Revisar la consola del navegador y ejecutar `npm run build` |
-| No se escucha audio | El navegador bloquea audio hasta un gesto del usuario | Hacer clic o pulsar una tecla; el audio se desbloquea en la primera interacción |
-| Los personajes o el escenario no muestran texturas | Los assets no se cargaron o el canvas no soporta patrones | Revisar `missingImages` en la consola y ejecutar `npm run build` |
-| Los personajes no cambian de animación al caminar | Solo existen sprites de estado quieto | Es el alcance actual; las animaciones se integrarán cuando se entreguen sus sprites |
-| FPS por debajo de 60 | Pestaña en segundo plano o equipo limitado | Mantener la pestaña activa y revisar la medición en primer plano |
+| Síntoma                                            | Causa probable                                            | Solución                                                                            |
+| -------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `npm` no se reconoce                               | Node.js no está instalado o no está en `PATH`             | Instalar Node.js 20+ y abrir una terminal nueva                                     |
+| El puerto 5173 está ocupado                        | Otro proceso o servidor Vite activo                       | Usar `npm run dev -- --port 5174` o detener el proceso anterior                     |
+| Pantalla en negro                                  | Error de JavaScript o assets                              | Revisar la consola del navegador y ejecutar `npm run build`                         |
+| No se escucha audio                                | El navegador bloquea audio hasta un gesto del usuario     | Hacer clic o pulsar una tecla; el audio se desbloquea en la primera interacción     |
+| Los personajes o el escenario no muestran texturas | Los assets no se cargaron o el canvas no soporta patrones | Revisar `missingImages` en la consola y ejecutar `npm run build`                    |
+| Los personajes no cambian de animación al caminar  | Solo existen sprites de estado quieto                     | Es el alcance actual; las animaciones se integrarán cuando se entreguen sus sprites |
+| FPS por debajo de 60                               | Pestaña en segundo plano o equipo limitado                | Mantener la pestaña activa y revisar la medición en primer plano                    |
 
 ## Mapa del repositorio
 
@@ -284,29 +294,29 @@ La evidencia reproducible de cada sprint está en `docs/evidence/i1/`, `docs/evi
 
 ## Controles actuales (I1 + I2 + I3)
 
-| Contexto | Acción | Entrada |
-|---|---|---|
-| Menú | Cambiar personaje | `←` `→` / `A` `D` / ratón |
-| Menú | Iniciar partida | `Enter` / `Espacio` / clic en el botón |
-| Menú | Activar o silenciar audio | `M` / botón de sonido |
-| Escena 1 | Avanzar cinemáticas | `Enter` / `Espacio` / Clic |
-| Escena 1 | Mover | `WASD` / flechas |
-| Escena 1 | Apuntar | Ratón |
-| Escena 1 | Lanzar el teclado | `E` / `Espacio` |
-| Escena 1 | Salir al pasillo | Caminar a la zona verde de salida |
-| Escena 1 | Volver al menú | `Esc` |
-| Escena 2 | Saltar cinemáticas | `Enter` / `Espacio` |
-| Escena 2 | Mover | `WASD` / flechas |
-| Escena 2 | Apuntar | Ratón |
-| Escena 2 | Romper el gabinete | Mantener `E` frente a la bomba (3 golpes) |
-| Escena 2 | Tomar el Hacha de Incendios | `E` / `Espacio` con el gabinete roto |
-| Escena 2 | Atacar | Clic / `Espacio` |
-| Escena 2 | Salir al patio | Eliminar la oleada y cruzar la salida verde |
-| Escena 2 | Volver al menú | `Esc` |
-| Cierre de I3 | Repetir escena | `R` / `Enter` con la opción seleccionada |
-| Cierre de I3 | Volver al menú | `M` / `Esc` |
-| Game Over (I1–I3) | Reiniciar la escena activa | `R` / `Enter` con la opción seleccionada |
-| Game Over (I1–I3) | Volver al menú | `M` / `Esc` |
+| Contexto          | Acción                      | Entrada                                     |
+| ----------------- | --------------------------- | ------------------------------------------- |
+| Menú              | Cambiar personaje           | `←` `→` / `A` `D` / ratón                   |
+| Menú              | Iniciar partida             | `Enter` / `Espacio` / clic en el botón      |
+| Menú              | Activar o silenciar audio   | `M` / botón de sonido                       |
+| Escena 1          | Avanzar cinemáticas         | `Enter` / `Espacio` / Clic                  |
+| Escena 1          | Mover                       | `WASD` / flechas                            |
+| Escena 1          | Apuntar                     | Ratón                                       |
+| Escena 1          | Lanzar el teclado           | `E` / `Espacio`                             |
+| Escena 1          | Salir al pasillo            | Caminar a la zona verde de salida           |
+| Escena 1          | Volver al menú              | `Esc`                                       |
+| Escena 2          | Saltar cinemáticas          | `Enter` / `Espacio`                         |
+| Escena 2          | Mover                       | `WASD` / flechas                            |
+| Escena 2          | Apuntar                     | Ratón                                       |
+| Escena 2          | Romper el gabinete          | Mantener `E` frente a la bomba (3 golpes)   |
+| Escena 2          | Tomar el Hacha de Incendios | `E` / `Espacio` con el gabinete roto        |
+| Escena 2          | Atacar                      | Clic / `Espacio`                            |
+| Escena 2          | Salir al patio              | Eliminar la oleada y cruzar la salida verde |
+| Escena 2          | Volver al menú              | `Esc`                                       |
+| Cierre de I3      | Repetir escena              | `R` / `Enter` con la opción seleccionada    |
+| Cierre de I3      | Volver al menú              | `M` / `Esc`                                 |
+| Game Over (I1–I3) | Reiniciar la escena activa  | `R` / `Enter` con la opción seleccionada    |
+| Game Over (I1–I3) | Volver al menú              | `M` / `Esc`                                 |
 
 ## Lectura obligatoria para un agente
 
