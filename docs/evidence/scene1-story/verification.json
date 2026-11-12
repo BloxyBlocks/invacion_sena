@@ -1,0 +1,210 @@
+{
+  "environment": {
+    "url": "http://localhost:5173",
+    "viewport": "1280x720",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "date": "2026-11-12T00:53:19.505Z"
+  },
+  "checks": [
+    {
+      "name": "Escena 1 inicia en fase intro",
+      "pass": true,
+      "details": {
+        "phase": "intro",
+        "phaseTime": 0.25,
+        "cutscene": false,
+        "cutsceneIndex": 0,
+        "cutsceneTotal": 0,
+        "classmates": 3,
+        "classmateNames": [
+          "Chantre",
+          "Juan",
+          "Daiver"
+        ],
+        "classmatesAtHome": true,
+        "classmatesGone": false,
+        "instructor": true,
+        "instructorAtDesk": true,
+        "instructorGone": false,
+        "doorClosed": false,
+        "playerX": 1119,
+        "playerY": 394,
+        "seatX": 518,
+        "seatY": 553,
+        "arrivalDone": false,
+        "zombie": false,
+        "zombieState": null,
+        "throws": 0,
+        "knockouts": 0,
+        "exitOpen": false,
+        "screamFlash": 0,
+        "fps": 51
+      }
+    },
+    {
+      "name": "Tres compañeros en el salón",
+      "pass": true,
+      "details": {
+        "classmates": 3,
+        "names": [
+          "Chantre",
+          "Juan",
+          "Daiver"
+        ]
+      }
+    },
+    {
+      "name": "Compañeros del personaje correcto (sin Zamora)",
+      "pass": true,
+      "details": [
+        "Chantre",
+        "Juan",
+        "Daiver"
+      ]
+    },
+    {
+      "name": "Todos los compañeros en su puesto",
+      "pass": true,
+      "details": {
+        "classmatesAtHome": true
+      }
+    },
+    {
+      "name": "Instructor presente en su escritorio",
+      "pass": true,
+      "details": {
+        "instructor": true,
+        "instructorAtDesk": true
+      }
+    },
+    {
+      "name": "El jugador se ubica en su puesto",
+      "pass": true,
+      "details": {
+        "playerX": 518,
+        "playerY": 553,
+        "seatX": 518,
+        "seatY": 553
+      }
+    },
+    {
+      "name": "La puerta se cierra tras entrar",
+      "pass": true,
+      "details": true
+    },
+    {
+      "name": "Cinemática del instructor activa",
+      "pass": true,
+      "details": {
+        "phase": "intro",
+        "cutsceneIndex": 0,
+        "cutsceneTotal": 2
+      }
+    },
+    {
+      "name": "Dos beats: llegada + clase SOLID",
+      "pass": true,
+      "details": {
+        "total": 2
+      }
+    },
+    {
+      "name": "Salto temporal '2 HORAS DESPUÉS'",
+      "pass": true,
+      "details": {
+        "phase": "timeskip"
+      }
+    },
+    {
+      "name": "Los compañeros salen del ambiente",
+      "pass": true,
+      "details": {
+        "phase": "departure"
+      }
+    },
+    {
+      "name": "La puerta queda cerrada y suena el grito",
+      "pass": true,
+      "details": {
+        "phase": "scream",
+        "classmatesGone": true,
+        "instructorGone": true,
+        "doorClosed": true,
+        "screamFlash": 0.93
+      }
+    },
+    {
+      "name": "Línea '¡¿Qué fue esoo?!' en cinemática",
+      "pass": true,
+      "details": {
+        "phase": "scream",
+        "beats": 1
+      }
+    },
+    {
+      "name": "El zombi irrumpe por la puerta",
+      "pass": true,
+      "details": {
+        "phase": "breach",
+        "zombie": true,
+        "zombieState": "entering",
+        "doorClosed": false
+      }
+    },
+    {
+      "name": "El teclado deja fuera de combate al zombi",
+      "pass": true,
+      "details": {
+        "phase": "knockout",
+        "throws": 1,
+        "knockouts": 1,
+        "zombieState": "knockedOut"
+      }
+    },
+    {
+      "name": "Se habilita la salida al pasillo",
+      "pass": true,
+      "details": {
+        "phase": "free",
+        "exitOpen": true
+      }
+    },
+    {
+      "name": "Sin errores en consola",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "Rendimiento estable (FPS > 30)",
+      "pass": true,
+      "details": {
+        "fps": 60
+      }
+    }
+  ],
+  "screenshots": [
+    "01-llegada-al-ambiente-1280x720.png",
+    "02-clase-solid-profesor-1280x720.png",
+    "03-profesor-solid-1280x720.png",
+    "04-dos-horas-despues-1280x720.png",
+    "05-companeros-salen-1280x720.png",
+    "06-grito-1280x720.png",
+    "07-que-fue-eso-1280x720.png",
+    "08-irrupcion-zombi-1280x720.png",
+    "09-teclado-lista-1280x720.png",
+    "10-knockout-teclado-1280x720.png",
+    "11-salida-habilitada-1280x720.png"
+  ],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "stats": {
+    "passed": 18,
+    "total": 18,
+    "consoleErrors": 0,
+    "fps": 60
+  }
+}

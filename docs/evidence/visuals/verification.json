@@ -1,0 +1,336 @@
+{
+  "generatedAt": "2026-11-10T02:19:12.740Z",
+  "environment": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "dpr": 1,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+  },
+  "assets": {
+    "images": 20,
+    "audio": 4,
+    "total": 24,
+    "errors": [],
+    "missingImages": []
+  },
+  "menu": {
+    "layout1280": {
+      "wide": true,
+      "cols": 2,
+      "rows": 2,
+      "cards": 4,
+      "contentX": 627,
+      "contentW": 589,
+      "cardTop": 143,
+      "cardBottom": 410,
+      "detailsBottom": 549,
+      "startBottom": 614,
+      "insideViewport": true,
+      "characterVisible": true
+    },
+    "portraits": [
+      {
+        "id": "zamora",
+        "hasSprite": true,
+        "image": true
+      },
+      {
+        "id": "chantre",
+        "hasSprite": true,
+        "image": true
+      },
+      {
+        "id": "juan",
+        "hasSprite": true,
+        "image": true
+      },
+      {
+        "id": "daiver",
+        "hasSprite": true,
+        "image": true
+      }
+    ],
+    "selection": [
+      {
+        "index": 0,
+        "id": "zamora",
+        "name": "Zamora"
+      },
+      {
+        "index": 1,
+        "id": "chantre",
+        "name": "Chantre"
+      },
+      {
+        "index": 2,
+        "id": "juan",
+        "name": "Juan"
+      },
+      {
+        "index": 3,
+        "id": "daiver",
+        "name": "Daiver"
+      }
+    ],
+    "layout1024": {
+      "wide": true,
+      "cols": 2,
+      "contentX": 502,
+      "startBottom": 402,
+      "insideViewport": true
+    },
+    "layout820": {
+      "wide": false,
+      "cols": 2,
+      "contentX": 90,
+      "insideViewport": true
+    },
+    "fps": {
+      "samples": [
+        143.97120575884804,
+        144.01262576445066,
+        144,
+        143.99999999999997,
+        143.9712057588481,
+        144.01262576445066
+      ],
+      "min": 143.97120575884804,
+      "median": 144,
+      "max": 144.01262576445066
+    },
+    "finalFps": {
+      "samples": [
+        143.97120575884855,
+        144.01262576445006,
+        143.99999999999991,
+        143.99999999999991,
+        143.99999999999991,
+        144.04104183109615
+      ],
+      "min": 143.97120575884855,
+      "median": 143.99999999999991,
+      "max": 144.04104183109615
+    }
+  },
+  "scenes": {
+    "scene1": [
+      {
+        "characterId": "zamora",
+        "phase": "threat",
+        "textures": {
+          "wallTexture": true,
+          "floorTexture": true,
+          "roomOverlay": true,
+          "overlaySize": [
+            1172,
+            547
+          ]
+        },
+        "directions": {
+          "down": {
+            "facing": "down",
+            "view": "zamoraAbajo",
+            "moving": false
+          },
+          "up": {
+            "facing": "up",
+            "view": "zamoraArriba",
+            "moving": true
+          },
+          "right": {
+            "facing": "right",
+            "view": "zamoraDerecha",
+            "moving": true
+          },
+          "left": {
+            "facing": "left",
+            "view": "zamoraIzquierda",
+            "moving": true
+          }
+        },
+        "fps": {
+          "samples": [
+            144,
+            144.01262576445117,
+            143.97120575884756
+          ],
+          "min": 143.97120575884756,
+          "median": 144,
+          "max": 144.01262576445117
+        }
+      },
+      {
+        "characterId": "chantre",
+        "phase": "threat",
+        "textures": {
+          "wallTexture": true,
+          "floorTexture": true,
+          "roomOverlay": true,
+          "overlaySize": [
+            1172,
+            547
+          ]
+        },
+        "directions": {
+          "down": {
+            "facing": "down",
+            "view": "chantreAbajo",
+            "moving": false
+          },
+          "up": {
+            "facing": "up",
+            "view": "chantreArriba",
+            "moving": true
+          },
+          "right": {
+            "facing": "right",
+            "view": "chantreDerecha",
+            "moving": true
+          },
+          "left": {
+            "facing": "left",
+            "view": "chantreIzquierda",
+            "moving": true
+          }
+        },
+        "fps": {
+          "samples": [
+            143.97120575884756,
+            144.04104183109726,
+            143.9712057588486
+          ],
+          "min": 143.97120575884756,
+          "median": 143.9712057588486,
+          "max": 144.04104183109726
+        }
+      },
+      {
+        "characterId": "juan",
+        "phase": "threat",
+        "textures": {
+          "wallTexture": true,
+          "floorTexture": true,
+          "roomOverlay": true,
+          "overlaySize": [
+            1172,
+            547
+          ]
+        },
+        "directions": {
+          "down": {
+            "facing": "down",
+            "view": "juanAbajo",
+            "moving": false
+          },
+          "up": {
+            "facing": "up",
+            "view": "juanArriba",
+            "moving": true
+          },
+          "right": {
+            "facing": "right",
+            "view": "juanDerecha",
+            "moving": true
+          },
+          "left": {
+            "facing": "left",
+            "view": "juanIzquierda",
+            "moving": true
+          }
+        },
+        "fps": {
+          "samples": [
+            143.9712057588476,
+            143.99999999999997,
+            144.04104183109726
+          ],
+          "min": 143.9712057588476,
+          "median": 143.99999999999997,
+          "max": 144.04104183109726
+        }
+      },
+      {
+        "characterId": "daiver",
+        "phase": "threat",
+        "textures": {
+          "wallTexture": true,
+          "floorTexture": true,
+          "roomOverlay": true,
+          "overlaySize": [
+            1172,
+            547
+          ]
+        },
+        "directions": {
+          "down": {
+            "facing": "down",
+            "view": "daiverAbajo",
+            "moving": false
+          },
+          "up": {
+            "facing": "up",
+            "view": "daiverArriba",
+            "moving": true
+          },
+          "right": {
+            "facing": "right",
+            "view": "daiverDerecha",
+            "moving": true
+          },
+          "left": {
+            "facing": "left",
+            "view": "daiverIzquierda",
+            "moving": true
+          }
+        },
+        "fps": {
+          "samples": [
+            143.99999999999991,
+            143.99999999999991,
+            143.99999999999991
+          ],
+          "min": 143.99999999999991,
+          "median": 143.99999999999991,
+          "max": 143.99999999999991
+        }
+      }
+    ],
+    "test": {
+      "floorOverlay": true,
+      "overlaySize": [
+        1168,
+        550
+      ],
+      "wallTexture": true,
+      "floorTexture": true,
+      "sprite": "chantreArriba"
+    },
+    "testFps": {
+      "samples": [
+        143.99999999999991,
+        143.99999999999991,
+        144.01262576445006
+      ],
+      "min": 143.99999999999991,
+      "median": 143.99999999999991,
+      "max": 144.01262576445006
+    }
+  },
+  "screenshots": [
+    "menu-1280x720.png",
+    "menu-zamora-1280x720.png",
+    "menu-chantre-1280x720.png",
+    "menu-juan-1280x720.png",
+    "menu-daiver-1280x720.png",
+    "menu-1024x600.png",
+    "menu-820x1000.png",
+    "scene1-zamora-1280x720.png",
+    "scene1-chantre-1280x720.png",
+    "scene1-juan-1280x720.png",
+    "scene1-daiver-1280x720.png",
+    "test-textures-1280x720.png"
+  ],
+  "consoleErrors": []
+}

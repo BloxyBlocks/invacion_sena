@@ -1,0 +1,5 @@
+A top-down 2D game character sprite sheet containing 4 distinct directional angles of the same character: facing down, facing up, facing left, and facing right. 
+Minimalist vector art style, NOT pixel art. 
+Strictly top-down overhead perspective showing the top of the head, hair, and slightly the upper face/eyes for each pose. 
+The character has fair/white skin, dark hair, is wearing a clean solid blue shirt with exact color hex code #203957, a matching blue tie, and black shoes. 
+Clean flat vector illustration, smooth minimalist shapes, isolated directional poses arranged in a grid, soft ambient lighting, clean solid white background, high contrast, game asset design.

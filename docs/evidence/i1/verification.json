@@ -1,0 +1,42 @@
+{
+  "sprint": "I1",
+  "date": "2026-11-08",
+  "status": "implemented_pending_G3",
+  "environment": {
+    "os": "Windows",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "vite": "8.3.6",
+    "browser": "Google Chrome 156.0.8078.81 headless"
+  },
+  "viewports": [
+    { "width": 1280, "height": 720, "result": "ok" },
+    { "width": 1024, "height": 600, "result": "ok" }
+  ],
+  "checks": {
+    "build": { "command": "npm run build", "result": "ok", "modules": 20 },
+    "fps": { "value": 60, "result": "ok" },
+    "assets": { "loaded": 1, "errors": 0, "result": "ok" },
+    "sceneFlow": ["boot", "menu", "test", "gameOver", "test", "menu"],
+    "keyboardSelection": { "sequence": [0, 1, 0], "result": "ok" },
+    "soundToggle": { "afterFirstM": true, "afterSecondM": false, "result": "ok" },
+    "audioUnlock": { "unlockedAfterFirstKey": true, "result": "ok" },
+    "movement": { "key": "KeyD", "durationMs": 600, "deltaPx": 136, "result": "ok" },
+    "gameOver": { "triggeredBy": "hazard damage", "result": "ok" },
+    "restart": { "state": "test", "health": 100, "result": "ok" },
+    "backToMenu": { "state": "menu", "result": "ok" },
+    "consoleErrors": []
+  },
+  "screenshots": [
+    "docs/evidence/i1/menu-1280x720.png",
+    "docs/evidence/i1/test-1280x720.png",
+    "docs/evidence/i1/gameover-1280x720.png",
+    "docs/evidence/i1/menu-1024x600.png"
+  ],
+  "limitations": [
+    "Assets definitivos pendientes de trabajo manual.",
+    "RNF-01 con 100 entidades pendiente para T-605.",
+    "Compatibilidad con Firefox, Edge y Safari no verificada.",
+    "Carga de audio implementada; los archivos finales se integraron después y se documentan en docs/evidence/audio/."
+  ]
+}

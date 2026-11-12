@@ -1,0 +1,101 @@
+{
+  "sprint": "I2",
+  "scope": "Integración de assets oficiales (T-206, T-207)",
+  "date": "2026-11-08",
+  "status": "implemented_pending_G3",
+  "environment": {
+    "os": "Windows",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "vite": "8.3.6",
+    "browser": "Google Chrome 156.0.8078.81 headless"
+  },
+  "viewports": [
+    { "width": 1280, "height": 720, "result": "ok" },
+    { "width": 1024, "height": 600, "result": "ok" }
+  ],
+  "assets": {
+    "total": 5,
+    "loaded": 5,
+    "errors": [],
+    "files": [
+      { "key": "logo", "path": "assets/img/icons/icon.png", "width": 1512, "height": 1512 },
+      { "key": "zamoraAbajo", "path": "assets/img/players/zamora/vista_abajo.png", "width": 627, "height": 627 },
+      { "key": "zamoraArriba", "path": "assets/img/players/zamora/vista_arriba.png", "width": 627, "height": 627 },
+      { "key": "zamoraDerecha", "path": "assets/img/players/zamora/vista_derecha.png", "width": 627, "height": 627 },
+      { "key": "zamoraIzquierda", "path": "assets/img/players/zamora/vista_izquierda.png", "width": 627, "height": 627 }
+    ],
+    "crops": {
+      "down": { "x": 169, "y": 50, "w": 366, "h": 486 },
+      "up": { "x": 91, "y": 50, "w": 367, "h": 483 },
+      "right": { "x": 99, "y": 33, "w": 362, "h": 479 },
+      "left": { "x": 161, "y": 31, "w": 370, "h": 478 }
+    }
+  },
+  "checks": {
+    "build": { "command": "npm run build", "result": "ok", "modules": 29, "emittedImages": 5 },
+    "faviconDev": "/assets/img/icons/icon.png",
+    "faviconBuild": "rewritten_to_hashed_png",
+    "fps": { "value": 60, "result": "ok" },
+    "consoleErrors": [],
+    "logo": {
+      "boot": "ok",
+      "menu": "ok",
+      "introPanel": "ok",
+      "favicon": "ok"
+    },
+    "zamoraSprites": {
+      "usingSprite": true,
+      "facing": {
+        "right": { "key": "KeyD", "result": "right" },
+        "left": { "key": "KeyA", "result": "left" },
+        "up": { "key": "KeyW", "result": "up" },
+        "down": { "key": "KeyS", "result": "down" }
+      },
+      "result": "ok"
+    },
+    "portraits": {
+      "menuCard": "ok",
+      "menuDetails": "ok",
+      "hud": "ok",
+      "gameOver": "ok"
+    },
+    "proceduralFallback": {
+      "character": "chantre",
+      "usingSprite": false,
+      "result": "ok"
+    },
+    "i2FlowRegression": {
+      "phases": ["intro", "breach", "threat", "knockout", "free", "complete"],
+      "throws": 1,
+      "knockouts": 1,
+      "reachedExit": true,
+      "result": "ok"
+    },
+    "animations": {
+      "walk": "not_implemented_no_assets",
+      "run": "not_implemented_no_assets",
+      "hit": "not_implemented_no_assets"
+    }
+  },
+  "screenshots": [
+    "docs/evidence/assets/boot-1280x720.png",
+    "docs/evidence/assets/menu-1280x720.png",
+    "docs/evidence/assets/menu-1024x600.png",
+    "docs/evidence/assets/intro-1280x720.png",
+    "docs/evidence/assets/threat-1280x720.png",
+    "docs/evidence/assets/facing-right-1280x720.png",
+    "docs/evidence/assets/facing-left-1280x720.png",
+    "docs/evidence/assets/facing-up-1280x720.png",
+    "docs/evidence/assets/facing-down-1280x720.png",
+    "docs/evidence/assets/scene1-1024x600.png",
+    "docs/evidence/assets/chantre-fallback-1280x720.png"
+  ],
+  "limitations": [
+    "Solo existe el estado quieto de Zamora; no hay animaciones de caminar, correr ni golpear.",
+    "Chantre, Juan, Daiver y el Zombi Aprendiz usan render procedural.",
+    "El audio de esta verificación era sintetizado; la música contextual y los pasos posteriores están en docs/evidence/audio/.",
+    "Compatibilidad con Firefox, Edge y Safari no verificada.",
+    "RNF-01 con 100 entidades pendiente para T-605."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "environment": {
+    "url": "http://localhost:5173",
+    "viewport": "1280x720",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "date": "2026-11-11T23:47:14.287Z"
+  },
+  "checks": [
+    {
+      "name": "Escena 1 conduce a la Escena 2",
+      "pass": true,
+      "details": {
+        "state": "scene2"
+      }
+    },
+    {
+      "name": "Cinemática inicial activa",
+      "pass": true,
+      "details": {
+        "phase": "intro",
+        "cutscene": true
+      }
+    },
+    {
+      "name": "Cinemática inicial termina en exploración",
+      "pass": true,
+      "details": {
+        "phase": "explore"
+      }
+    },
+    {
+      "name": "El arco Melee responde a las 4 direcciones del apuntado",
+      "pass": true,
+      "details": {
+        "hits": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "behind": false
+      }
+    },
+    {
+      "name": "Pulsar E sin mantener no rompe el gabinete",
+      "pass": true,
+      "details": {
+        "state": "intact",
+        "hits": 0
+      }
+    },
+    {
+      "name": "Mantener E ejecuta 3 golpes y rompe el gabinete",
+      "pass": true,
+      "details": {
+        "state": "broken",
+        "hits": 3
+      }
+    },
+    {
+      "name": "E equipa el Hacha de Incendios",
+      "pass": true,
+      "details": {
+        "weapon": "fireAxe",
+        "cabinet": "taken",
+        "cutscene": true
+      }
+    },
+    {
+      "name": "Tomar el hacha inicia la oleada de zombis",
+      "pass": true,
+      "details": {
+        "phase": "wave",
+        "queued": 6,
+        "spawned": 0,
+        "waveSize": 6
+      }
+    },
+    {
+      "name": "El hacha elimina a los zombis de la oleada",
+      "pass": true,
+      "details": {
+        "killed": 6,
+        "totalZombies": 6,
+        "attacks": 6,
+        "alive": 0
+      }
+    },
+    {
+      "name": "La oleada despejada abre la salida al patio",
+      "pass": true,
+      "details": {
+        "phase": "cleared",
+        "exitOpen": true,
+        "cutscene": false
+      }
+    },
+    {
+      "name": "La salida conduce al cierre de la Escena 2",
+      "pass": true,
+      "details": {
+        "phase": "complete",
+        "finalTime": 20.56666666666678
+      }
+    },
+    {
+      "name": "Escena 2 responsive a 1024 × 600",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "height": 600,
+        "phase": "explore",
+        "interior": {
+          "x": 51.704,
+          "y": 121.08,
+          "w": 920.592,
+          "h": 405.84
+        },
+        "cabinetInside": true
+      }
+    },
+    {
+      "name": "Salud a 0 en Escena 2 abre Game Over",
+      "pass": true,
+      "details": {
+        "state": "gameOver"
+      }
+    },
+    {
+      "name": "Game Over reinicia la Escena 2",
+      "pass": true,
+      "details": {
+        "state": "scene2"
+      }
+    },
+    {
+      "name": "FPS estable durante la verificación",
+      "pass": true,
+      "details": {
+        "fps": 58.06077027288554
+      }
+    }
+  ],
+  "screenshots": [
+    "intro-cinematic-1280x720.png",
+    "cabinet-hold-progress-1280x720.png",
+    "cabinet-broken-1280x720.png",
+    "axe-pickup-cinematic-1280x720.png",
+    "wave-1-1280x720.png",
+    "wave-cleared-exit-1280x720.png",
+    "complete-1280x720.png",
+    "scene2-1024x600.png"
+  ],
+  "console": [],
+  "errors": [],
+  "passed": true
+}

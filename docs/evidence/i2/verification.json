@@ -1,0 +1,67 @@
+{
+  "sprint": "I2",
+  "date": "2026-11-08",
+  "status": "implemented_pending_G3",
+  "environment": {
+    "os": "Windows",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "vite": "8.3.6",
+    "browser": "Google Chrome 156.0.8078.81 headless"
+  },
+  "viewports": [
+    { "width": 1280, "height": 720, "result": "ok" },
+    { "width": 1024, "height": 600, "result": "ok" }
+  ],
+  "checks": {
+    "build": { "command": "npm run build", "result": "ok", "modules": 23 },
+    "fps": { "value": 60, "result": "ok" },
+    "assets": { "loaded": 5, "errors": 0, "result": "ok" },
+    "audioUnlock": { "unlockedAfterFirstKey": true, "result": "ok" },
+    "sceneFlow": [
+      "menu",
+      "scene1:intro",
+      "scene1:breach",
+      "scene1:threat",
+      "scene1:knockout",
+      "scene1:free",
+      "scene1:exiting",
+      "scene1:complete",
+      "scene1:intro:restart",
+      "menu"
+    ],
+    "intro": { "phase": "intro", "character": "zamora", "result": "ok" },
+    "breach": { "phase": "breach", "zombieState": "entering", "result": "ok" },
+    "threat": { "phase": "threat", "zombieState": "chase", "result": "ok" },
+    "keyboardThrow": {
+      "key": "KeyE",
+      "throws": 1,
+      "knockouts": 1,
+      "zombieState": "knockedOut",
+      "result": "ok"
+    },
+    "exit": { "phase": "free", "exitOpen": true, "reached": true, "result": "ok" },
+    "movement": { "key": "KeyD", "durationMs": 900, "deltaPx": 202, "result": "ok" },
+    "completion": { "phase": "complete", "finalTimeSeconds": 14.2, "result": "ok" },
+    "restart": { "phase": "intro", "health": 100, "throws": 0, "result": "ok" },
+    "backToMenu": { "state": "menu", "result": "ok" },
+    "consoleErrors": []
+  },
+  "screenshots": [
+    "docs/evidence/i2/intro-1280x720.png",
+    "docs/evidence/i2/breach-1280x720.png",
+    "docs/evidence/i2/threat-1280x720.png",
+    "docs/evidence/i2/knockout-1280x720.png",
+    "docs/evidence/i2/exit-1280x720.png",
+    "docs/evidence/i2/complete-1280x720.png",
+    "docs/evidence/i2/threat-1024x600.png"
+  ],
+  "limitations": [
+    "El escenario, los zombis y los personajes sin sprites usan render procedural.",
+    "Zamora solo tiene sprites de estado quieto; caminar, correr y golpear no están animados.",
+    "La Escena 2 se implementa en el Sprint I3; la salida muestra el cierre de I2.",
+    "RNF-01 con 100 entidades pendiente para T-605.",
+    "Compatibilidad con Firefox, Edge y Safari no verificada.",
+    "SFX sintetizados con Web Audio API; no hay audio final."
+  ]
+}

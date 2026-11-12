@@ -1,0 +1,18 @@
+{
+  "name": "invacion-sena",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Juego web 2D de supervivencia ambientado en el SENA",
+  "author": "Diego Alejandro Zamora",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:check": "node scripts/check-docs.mjs",
+    "docs:check:strict": "node scripts/check-docs.mjs --strict"
+  },
+  "devDependencies": {
+    "vite": "^8.3.6"
+  }
+}

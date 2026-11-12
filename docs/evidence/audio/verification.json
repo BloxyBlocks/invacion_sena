@@ -1,0 +1,111 @@
+{
+  "sprint": "I2",
+  "scope": "Audio contextual y pasos para todos los personajes (T-208, T-209)",
+  "date": "2026-11-08",
+  "status": "implemented_pending_G3",
+  "environment": {
+    "os": "Windows",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "vite": "8.3.6",
+    "browser": "Google Chrome 156.0.8078.81 headless",
+    "server": "http://127.0.0.1:5173"
+  },
+  "viewports": [
+    { "width": 1280, "height": 720, "result": "ok" }
+  ],
+  "audioFiles": [
+    { "key": "fondoMenu", "path": "assets/sound/music/menu/fondo_menu.mp3", "durationSeconds": 148.04, "usage": "menu" },
+    { "key": "ambienteTranquilo", "path": "assets/sound/music/ambiental/ambiente_tranquilo.mp3", "durationSeconds": 181.99, "usage": "scene1_intro" },
+    { "key": "ambienteHorror", "path": "assets/sound/music/ambiental/ambiente_horror.mp3", "durationSeconds": 122.04, "usage": "scene1_breach_onwards" },
+    { "key": "caminar", "path": "assets/sound/effects/caminar.mp3", "durationSeconds": 5.92, "usage": "footsteps_loop" }
+  ],
+  "assets": {
+    "total": 9,
+    "loaded": 9,
+    "errors": [],
+    "images": 5,
+    "audio": 4
+  },
+  "checks": {
+    "build": {
+      "command": "npm run build",
+      "result": "ok",
+      "modules": 33,
+      "emittedAudio": 4,
+      "emittedImages": 5
+    },
+    "audioGraph": {
+      "contextState": "running",
+      "masterVolume": 0.8,
+      "musicVolume": 0.5,
+      "sfxVolume": 0.9,
+      "footstepGain": 2,
+      "crossfadeSeconds": 0.8,
+      "result": "ok"
+    },
+    "autoplayPolicy": {
+      "beforeGesture": { "unlocked": false, "desiredMusicKey": "fondoMenu", "currentMusicKey": null },
+      "afterGesture": { "unlocked": true, "currentMusicKey": "fondoMenu", "menuGain": 1 },
+      "result": "ok"
+    },
+    "musicBySituation": {
+      "menu": { "currentMusicKey": "fondoMenu", "menuGain": 1, "calmGain": 0, "horrorGain": 0 },
+      "intro": { "currentMusicKey": "ambienteTranquilo", "menuGain": 0, "calmPaused": false, "calmGain": 1, "horrorGain": 0 },
+      "breach": { "currentMusicKey": "ambienteHorror", "menuGain": 0, "calmGain": 0, "horrorPaused": false, "horrorGain": 1 },
+      "threat": { "currentMusicKey": "ambienteHorror", "horrorGain": 1 },
+      "knockout": { "currentMusicKey": "ambienteHorror", "horrorGain": 1 },
+      "free": { "currentMusicKey": "ambienteHorror", "horrorGain": 1 },
+      "exit": { "currentMusicKey": null, "desiredMusicKey": null, "allTracksPaused": true },
+      "restart": { "currentMusicKey": "ambienteTranquilo", "calmPaused": false, "calmGain": 1 },
+      "backToMenu": { "currentMusicKey": "fondoMenu", "menuPaused": false, "menuGain": 1 },
+      "result": "ok"
+    },
+    "footsteps": {
+      "trigger": "desplazamiento real > 0.05 px",
+      "stop": "sin desplazamiento, cambio de escena, salida o pestaña oculta",
+      "perCharacter": [
+        { "character": "zamora", "walking": { "paused": false, "currentTime": 0.91 }, "later": { "currentTime": 1.32 }, "advancedSeconds": 0.41, "idle": { "paused": true }, "result": "ok" },
+        { "character": "chantre", "walking": { "paused": false, "currentTime": 2.05 }, "later": { "currentTime": 2.46 }, "advancedSeconds": 0.41, "idle": { "paused": true }, "result": "ok" },
+        { "character": "juan", "walking": { "paused": false, "currentTime": 3.19 }, "later": { "currentTime": 3.60 }, "advancedSeconds": 0.41, "idle": { "paused": true }, "result": "ok" },
+        { "character": "daiver", "walking": { "paused": false, "currentTime": 4.32 }, "later": { "currentTime": 4.72 }, "advancedSeconds": 0.40, "idle": { "paused": true }, "result": "ok" }
+      ],
+      "result": "ok"
+    },
+    "mute": {
+      "before": { "muted": false, "masterGain": 0.8 },
+      "muted": { "muted": true, "masterGain": 0 },
+      "restored": { "muted": false, "masterGain": 0.8 },
+      "result": "ok"
+    },
+    "fps": { "value": 60, "result": "ok" },
+    "consoleErrors": [],
+    "i2FlowRegression": {
+      "phases": ["intro", "breach", "threat", "knockout", "free", "complete"],
+      "throws": 1,
+      "knockouts": 1,
+      "exitOpen": true,
+      "reachedExit": true,
+      "result": "ok"
+    }
+  },
+  "screenshots": [
+    "docs/evidence/audio/menu-music-1280x720.png",
+    "docs/evidence/audio/intro-calm-1280x720.png",
+    "docs/evidence/audio/breach-horror-1280x720.png",
+    "docs/evidence/audio/knockout-horror-1280x720.png",
+    "docs/evidence/audio/exit-ready-1280x720.png",
+    "docs/evidence/audio/complete-music-stopped-1280x720.png",
+    "docs/evidence/audio/steps-zamora-1280x720.png",
+    "docs/evidence/audio/steps-chantre-1280x720.png",
+    "docs/evidence/audio/steps-juan-1280x720.png",
+    "docs/evidence/audio/steps-daiver-1280x720.png"
+  ],
+  "limitations": [
+    "El navegador exige un primer gesto del usuario antes de reproducir audio.",
+    "La verificación se hizo en Chrome; Firefox, Edge y Safari no se probaron.",
+    "Solo existe el estado quieto de Zamora: no hay animaciones de caminar, correr ni golpear.",
+    "Chantre, Juan, Daiver y el Zombi Aprendiz mantienen render procedural.",
+    "La aprobación humana G3 sigue pendiente."
+  ]
+}
